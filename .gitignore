@@ -1,0 +1,27 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Generated research data and model artifacts are intentionally not committed.
+artifacts/*
+!artifacts/.gitkeep
+!artifacts/directions/
+artifacts/directions/*
+!artifacts/directions/attn-out-sra-r8.safetensors
+!artifacts/directions/attn-out-sra-r8.report.json
+data/generated/*
+!data/generated/.gitkeep
+data/eval/*
+!data/eval/.gitkeep
+!data/eval/bilingual-behavior-v1.jsonl
+!data/eval/writing-v1.jsonl
+
+# Local deployment configuration.
+.env
+.env.*
+!.env.example

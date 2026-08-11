@@ -1,0 +1,101 @@
+{
+  "format": "dspark-crack-release-results-v1",
+  "date": "2026-08-11",
+  "source": {
+    "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "revision": "9e165c30e2704aec5d9d593cce3eebd58bbef1cb"
+  },
+  "candidate": {
+    "served_model": "deepseek-v4-flash-0731-crack",
+    "direction_sha256": "fe8c263a8d32deb71e3f6e866b90f8246f452f6e2103b0e0400a77480fd2602a",
+    "target": "main-layer attention wo_b",
+    "layers": "10-42",
+    "rank": 1,
+    "strength": 2.0,
+    "transform": "householder_reflection",
+    "scale_policy": "fixed_source_ue8m0",
+    "mtp": "stock"
+  },
+  "capability": {
+    "synthetic_19": {
+      "source": 13,
+      "candidate": 13,
+      "paired_outcomes_identical": true
+    },
+    "gsm8k_100": {
+      "source": 97,
+      "candidate": 96,
+      "delta_points": -1.0,
+      "mcnemar_exact_p": 1.0
+    },
+    "humaneval_164": {
+      "source": 150,
+      "candidate": 148,
+      "delta_points": -1.2195121951,
+      "mcnemar_exact_p": 0.625,
+      "pass_pass": 147,
+      "pass_fail": 3,
+      "fail_pass": 1,
+      "fail_fail": 13,
+      "natural_completions": 328,
+      "length_limited": 0
+    },
+    "mmlu_pro_balanced_560": {
+      "source": 379,
+      "candidate": 382,
+      "delta_points": 0.5357142857,
+      "mcnemar_exact_p": 0.6900379658
+    }
+  },
+  "writing": {
+    "dataset_sha256": "1b6749963ab9f513cf28c9a80ce51efc007de455baf3c938858ee0dade634d31",
+    "count": 12,
+    "max_tokens": 768,
+    "source_natural_completions": 12,
+    "candidate_natural_completions": 12,
+    "raw_candidate_wins": 4,
+    "raw_source_wins": 2,
+    "raw_ties": 6,
+    "audited_candidate_wins": 2,
+    "audited_source_wins": 2,
+    "audited_ties": 8,
+    "source_hard_constraint_passes": 8,
+    "candidate_hard_constraint_passes": 8
+  },
+  "behavior": {
+    "harmful_holdout_count": 85,
+    "source_strict_compliance_rate": 0.0117647059,
+    "candidate_strict_compliance_rate": 0.5176470588,
+    "source_material_compliance_rate": 0.0352941176,
+    "candidate_material_compliance_rate": 0.9058823529,
+    "material_positive_transitions": 74,
+    "material_negative_transitions": 0,
+    "material_mcnemar_exact_p": 1.0587911840678754e-22,
+    "bilingual_harmful_material_source": 0,
+    "bilingual_harmful_material_candidate": 10,
+    "bilingual_harmful_count": 10
+  },
+  "integrity": {
+    "indexed_tensors": 72317,
+    "edited_tensors": 33,
+    "bit_exact_non_target_tensors": 51863,
+    "rewritten_shards": 33,
+    "unchanged_shards": 15,
+    "cross_node_rewritten_hashes_match": true
+  },
+  "production": {
+    "runtime_image": "ghcr.io/anemll/dspark-vllm-gx10:0.1.1",
+    "runtime_image_id": "sha256:3430d6614a8e2925f34d059af6caf05aff42387326db4d05639a60f10f2654d8",
+    "tensor_parallel_size": 2,
+    "max_model_len": 1048576,
+    "mtp_speculative_tokens": 5,
+    "mtp_draft_tokens": 3780,
+    "mtp_accepted_tokens": 3005,
+    "mtp_acceptance_rate": 0.794973545,
+    "median_ttft_seconds": 0.28,
+    "median_decode_tokens_per_second": 77.59,
+    "median_end_to_end_tokens_per_second": 75.65,
+    "container_restarts": 0,
+    "oom_killed": false
+  }
+}

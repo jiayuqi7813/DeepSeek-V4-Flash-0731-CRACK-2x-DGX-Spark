@@ -1,0 +1,31 @@
+{
+  "format": "dspark-crack-model-lock-v1",
+  "model_id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "revision": "9e165c30e2704aec5d9d593cce3eebd58bbef1cb",
+  "architecture": "DeepseekV4ForCausalLM",
+  "model_type": "deepseek_v4",
+  "hidden_size": 4096,
+  "num_hidden_layers": 43,
+  "index_total_size": 166878536440,
+  "index_tensor_count": 72317,
+  "shard_count": 48,
+  "weight_dtype": "F8_E4M3",
+  "weight_shape": [4096, 8192],
+  "scale_dtype": "F8_E8M0",
+  "scale_shape": [32, 64],
+  "block_size": [128, 128],
+  "main_target_pattern": "layers.{layer}.attn.wo_b",
+  "mtp_targets": [
+    "mtp.0.attn.wo_b",
+    "mtp.1.attn.wo_b",
+    "mtp.2.attn.wo_b"
+  ],
+  "metadata_sha256": {
+    "config.json": "6c8f3d2d3b48707541b88f32f22ef3f0f8a6b57d8523281e2b8d3cdb0ae9a023",
+    "model.safetensors.index.json": "98efab455cf08dfbbbaaba6f570e1bf10bf927d2b4c3c453a59c2f6f0e3be92b",
+    ".hf-manifest.json": "3bde134067c44bf8be782200d94d9743170101463c642b0564e51a6a8db8dd8c",
+    "LICENSE": "f2c6c602815669d292889e5be8c802f2ed950653b77999b1584e8e6aed25d040"
+  },
+  "runtime_image": "ghcr.io/anemll/dspark-vllm-gx10:0.1.1",
+  "runtime_image_id": "sha256:3430d6614a8e2925f34d059af6caf05aff42387326db4d05639a60f10f2654d8"
+}

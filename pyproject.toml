@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dspark-deepseek-v4-crack"
+version = "0.1.0"
+description = "Reproducible activation-guided FP8 refusal-subspace editing for DeepSeek V4 Flash 0731 on two DGX Sparks"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "snowywar and contributors" }]
+dependencies = [
+  "numpy>=2.0",
+  "safetensors>=0.8.0",
+  "torch>=2.11",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.9",
+]
+eval = ["pyarrow>=19"]
+
+[project.scripts]
+dspark-crack-checkpoint = "dspark_crack.identity:main"
+dspark-crack-directions = "dspark_crack.directions:main"
+dspark-crack-edit = "dspark_crack.edit_checkpoint:main"
+dspark-crack-validate = "dspark_crack.validate_candidate:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dspark_crack"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["src", "."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

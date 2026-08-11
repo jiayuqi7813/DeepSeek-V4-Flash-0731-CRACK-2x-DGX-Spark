@@ -1,0 +1,934 @@
+{
+  "format": "dspark-crack-direction-report-v2",
+  "surface": "attn_out",
+  "sample_count": 832,
+  "missing_count": 0,
+  "missing_ids": [],
+  "train_count": 662,
+  "holdout_count": 170,
+  "sra_rank": 8,
+  "sra_seed": 20260811,
+  "min_auc": 0.65,
+  "global_selection_metric": "train_auc",
+  "global_raw_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "global_sra_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "valid_raw_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "valid_sra_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "inactive_raw_layers": [],
+  "inactive_sra_layers": [],
+  "cross_layer_cosine": {
+    "mean_off_diagonal": 0.03085603378713131,
+    "min": -0.0698707103729248,
+    "max": 1.0000017881393433
+  },
+  "layers": [
+    {
+      "layer": 0,
+      "valid": true,
+      "sra_removed_fraction": 0.9077097773551941,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9804310202598572,
+        "holdout_auc": 0.981176495552063,
+        "holdout_effect_size": 3.71181583404541
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9813254475593567,
+        "holdout_auc": 0.9748097062110901,
+        "holdout_effect_size": 2.591377019882202
+      }
+    },
+    {
+      "layer": 1,
+      "valid": true,
+      "sra_removed_fraction": 0.9466173648834229,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9773916006088257,
+        "holdout_auc": 0.9796539545059204,
+        "holdout_effect_size": 3.7295756340026855
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9956645369529724,
+        "holdout_auc": 0.986297607421875,
+        "holdout_effect_size": 3.2648701667785645
+      }
+    },
+    {
+      "layer": 2,
+      "valid": true,
+      "sra_removed_fraction": 0.8336721658706665,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9883991479873657,
+        "holdout_auc": 0.990449845790863,
+        "holdout_effect_size": 3.6876373291015625
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9945144653320312,
+        "holdout_auc": 0.9889273643493652,
+        "holdout_effect_size": 3.5303566455841064
+      }
+    },
+    {
+      "layer": 3,
+      "valid": true,
+      "sra_removed_fraction": 0.9656359553337097,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9622858762741089,
+        "holdout_auc": 0.9764705896377563,
+        "holdout_effect_size": 3.305206537246704
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9837533235549927,
+        "holdout_auc": 0.9713494777679443,
+        "holdout_effect_size": 3.044710636138916
+      }
+    },
+    {
+      "layer": 4,
+      "valid": true,
+      "sra_removed_fraction": 0.9142666459083557,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9538339376449585,
+        "holdout_auc": 0.9615225195884705,
+        "holdout_effect_size": 3.0757904052734375
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9928989410400391,
+        "holdout_auc": 0.9818685054779053,
+        "holdout_effect_size": 3.2433977127075195
+      }
+    },
+    {
+      "layer": 5,
+      "valid": true,
+      "sra_removed_fraction": 0.8919652104377747,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9535783529281616,
+        "holdout_auc": 0.9749481081962585,
+        "holdout_effect_size": 3.4493589401245117
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9972435235977173,
+        "holdout_auc": 0.9961245656013489,
+        "holdout_effect_size": 3.7525463104248047
+      }
+    },
+    {
+      "layer": 6,
+      "valid": true,
+      "sra_removed_fraction": 0.7739300727844238,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9921687245368958,
+        "holdout_auc": 0.9980623126029968,
+        "holdout_effect_size": 4.055009841918945
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9978733062744141,
+        "holdout_auc": 0.995847761631012,
+        "holdout_effect_size": 3.8735125064849854
+      }
+    },
+    {
+      "layer": 7,
+      "valid": true,
+      "sra_removed_fraction": 0.8975362777709961,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9269447922706604,
+        "holdout_auc": 0.9341176748275757,
+        "holdout_effect_size": 2.654203176498413
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9992333054542542,
+        "holdout_auc": 0.9997231960296631,
+        "holdout_effect_size": 4.440769672393799
+      }
+    },
+    {
+      "layer": 8,
+      "valid": true,
+      "sra_removed_fraction": 0.8566771745681763,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9685928225517273,
+        "holdout_auc": 0.9856055378913879,
+        "holdout_effect_size": 3.241560220718384
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9965863823890686,
+        "holdout_auc": 0.9964013695716858,
+        "holdout_effect_size": 3.63863205909729
+      }
+    },
+    {
+      "layer": 9,
+      "valid": true,
+      "sra_removed_fraction": 0.9055005311965942,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9523187875747681,
+        "holdout_auc": 0.9721799492835999,
+        "holdout_effect_size": 3.350726366043091
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9853050112724304,
+        "holdout_auc": 0.9735640287399292,
+        "holdout_effect_size": 2.8244783878326416
+      }
+    },
+    {
+      "layer": 10,
+      "valid": true,
+      "sra_removed_fraction": 0.9248482584953308,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9545367360115051,
+        "holdout_auc": 0.9605536460876465,
+        "holdout_effect_size": 3.3633134365081787
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9956645369529724,
+        "holdout_auc": 0.9875432252883911,
+        "holdout_effect_size": 3.652318000793457
+      }
+    },
+    {
+      "layer": 11,
+      "valid": true,
+      "sra_removed_fraction": 0.8961027264595032,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9808691143989563,
+        "holdout_auc": 0.9903114438056946,
+        "holdout_effect_size": 3.880916118621826
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9954363107681274,
+        "holdout_auc": 0.9893425703048706,
+        "holdout_effect_size": 3.7138400077819824
+      }
+    },
+    {
+      "layer": 12,
+      "valid": true,
+      "sra_removed_fraction": 0.7783758044242859,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.98409104347229,
+        "holdout_auc": 0.9865744113922119,
+        "holdout_effect_size": 3.601210832595825
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9997718334197998,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 4.584750652313232
+      }
+    },
+    {
+      "layer": 13,
+      "valid": true,
+      "sra_removed_fraction": 0.8109261393547058,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9954363107681274,
+        "holdout_auc": 0.9934948086738586,
+        "holdout_effect_size": 3.9452505111694336
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9997352957725525,
+        "holdout_auc": 0.9998615980148315,
+        "holdout_effect_size": 4.6374664306640625
+      }
+    },
+    {
+      "layer": 14,
+      "valid": true,
+      "sra_removed_fraction": 0.509445071220398,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9996166229248047,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 4.904974460601807
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9995983839035034,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 4.115842342376709
+      }
+    },
+    {
+      "layer": 15,
+      "valid": true,
+      "sra_removed_fraction": 0.47161391377449036,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.99969881772995,
+        "holdout_auc": 0.9995847940444946,
+        "holdout_effect_size": 4.796523094177246
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9993975758552551,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 4.204237937927246
+      }
+    },
+    {
+      "layer": 16,
+      "valid": true,
+      "sra_removed_fraction": 0.353349506855011,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9992880821228027,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 5.516849994659424
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9986308813095093,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 5.1146464347839355
+      }
+    },
+    {
+      "layer": 17,
+      "valid": true,
+      "sra_removed_fraction": 0.5570626854896545,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9995801448822021,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 6.074265003204346
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9993702173233032,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 5.5010905265808105
+      }
+    },
+    {
+      "layer": 18,
+      "valid": true,
+      "sra_removed_fraction": 0.5018057227134705,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.999142050743103,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 6.348107814788818
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9992333054542542,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 6.689975738525391
+      }
+    },
+    {
+      "layer": 19,
+      "valid": true,
+      "sra_removed_fraction": 0.4100748300552368,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9997079372406006,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.5477728843688965
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9988043308258057,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 6.9174017906188965
+      }
+    },
+    {
+      "layer": 20,
+      "valid": true,
+      "sra_removed_fraction": 0.3597085773944855,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9995801448822021,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.150558471679688
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9993793368339539,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.824922561645508
+      }
+    },
+    {
+      "layer": 21,
+      "valid": true,
+      "sra_removed_fraction": 0.3866685628890991,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.999005138874054,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.918861389160156
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9996896982192993,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.816798210144043
+      }
+    },
+    {
+      "layer": 22,
+      "valid": true,
+      "sra_removed_fraction": 0.41007059812545776,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9995162487030029,
+        "holdout_auc": 0.9998615980148315,
+        "holdout_effect_size": 6.447603702545166
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9997079372406006,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.809135913848877
+      }
+    },
+    {
+      "layer": 23,
+      "valid": true,
+      "sra_removed_fraction": 0.31718307733535767,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9996440410614014,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.895334243774414
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9995527863502502,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.629227638244629
+      }
+    },
+    {
+      "layer": 24,
+      "valid": true,
+      "sra_removed_fraction": 0.5744157433509827,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9993884563446045,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.433979034423828
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9997991919517517,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.135148048400879
+      }
+    },
+    {
+      "layer": 25,
+      "valid": true,
+      "sra_removed_fraction": 0.4580647945404053,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9997627139091492,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.309728622436523
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9995162487030029,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.58791971206665
+      }
+    },
+    {
+      "layer": 26,
+      "valid": true,
+      "sra_removed_fraction": 0.3636670708656311,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9990507364273071,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.855969429016113
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9995710253715515,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.810245513916016
+      }
+    },
+    {
+      "layer": 27,
+      "valid": true,
+      "sra_removed_fraction": 0.5248041152954102,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.990863561630249,
+        "holdout_auc": 0.9943252801895142,
+        "holdout_effect_size": 3.691087007522583
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.996349036693573,
+        "holdout_auc": 0.9977854490280151,
+        "holdout_effect_size": 4.243056774139404
+      }
+    },
+    {
+      "layer": 28,
+      "valid": true,
+      "sra_removed_fraction": 0.3681291937828064,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9987221956253052,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.438844680786133
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9967780709266663,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.556328296661377
+      }
+    },
+    {
+      "layer": 29,
+      "valid": true,
+      "sra_removed_fraction": 0.36840495467185974,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9990781545639038,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.196990013122559
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9992515444755554,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 6.916069030761719
+      }
+    },
+    {
+      "layer": 30,
+      "valid": true,
+      "sra_removed_fraction": 0.4964306950569153,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9988499283790588,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.150802612304688
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9984574913978577,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 9.07432746887207
+      }
+    },
+    {
+      "layer": 31,
+      "valid": true,
+      "sra_removed_fraction": 0.5636499524116516,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9991146326065063,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.516933917999268
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9991876482963562,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.682662010192871
+      }
+    },
+    {
+      "layer": 32,
+      "valid": true,
+      "sra_removed_fraction": 0.3180120885372162,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9978550672531128,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.246671676635742
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9987404346466064,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.273962020874023
+      }
+    },
+    {
+      "layer": 33,
+      "valid": true,
+      "sra_removed_fraction": 0.4249287545681,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9974260926246643,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.087658882141113
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9980558753013611,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 9.726226806640625
+      }
+    },
+    {
+      "layer": 34,
+      "valid": true,
+      "sra_removed_fraction": 0.43895694613456726,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9983479380607605,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.1670918464660645
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9995801448822021,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.262560844421387
+      }
+    },
+    {
+      "layer": 35,
+      "valid": true,
+      "sra_removed_fraction": 0.24759280681610107,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.999351978302002,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 10.405645370483398
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9996713995933533,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 10.322244644165039
+      }
+    },
+    {
+      "layer": 36,
+      "valid": true,
+      "sra_removed_fraction": 0.3966679573059082,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9977090358734131,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.138654708862305
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.998430073261261,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.339757919311523
+      }
+    },
+    {
+      "layer": 37,
+      "valid": true,
+      "sra_removed_fraction": 0.42533454298973083,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.998101532459259,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.908563613891602
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9996166229248047,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 9.371849060058594
+      }
+    },
+    {
+      "layer": 38,
+      "valid": true,
+      "sra_removed_fraction": 0.3911675214767456,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.998658299446106,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.766130447387695
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9982840418815613,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.893967151641846
+      }
+    },
+    {
+      "layer": 39,
+      "valid": true,
+      "sra_removed_fraction": 0.29192352294921875,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9983753561973572,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.661095142364502
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9992697834968567,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 7.842197895050049
+      }
+    },
+    {
+      "layer": 40,
+      "valid": true,
+      "sra_removed_fraction": 0.3924880027770996,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.9962943196296692,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 6.027477264404297
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9983479380607605,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 6.290940761566162
+      }
+    },
+    {
+      "layer": 41,
+      "valid": true,
+      "sra_removed_fraction": 0.4780193865299225,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.996577262878418,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.877134323120117
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9986400008201599,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 9.525099754333496
+      }
+    },
+    {
+      "layer": 42,
+      "valid": true,
+      "sra_removed_fraction": 0.8663738369941711,
+      "raw": {
+        "valid": true,
+        "train_auc": 0.992579460144043,
+        "holdout_auc": 0.9911418557167053,
+        "holdout_effect_size": 3.8581857681274414
+      },
+      "sra": {
+        "valid": true,
+        "train_auc": 0.9990142583847046,
+        "holdout_auc": 1.0,
+        "holdout_effect_size": 8.282306671142578
+      }
+    }
+  ],
+  "output": "artifacts/directions/attn-out-sra-r8.safetensors"
+}
