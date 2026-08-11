@@ -12,6 +12,12 @@ captures, or candidate checkpoints.
 
 ## Weight release
 
+The validated release is public at
+[`Sn1waR/DeepSeek-V4-Flash-0731-CRACK-DSpark`](https://huggingface.co/Sn1waR/DeepSeek-V4-Flash-0731-CRACK-DSpark),
+initial Hub commit `86d85ce97bdcb9897fb0d1dd9caf7ef57e124e1a`. It contains 81 files,
+including all 48 safetensors shards, with a verified logical size of
+166,898,742,883 bytes.
+
 Run the Hub upload on the DGX head against the final validated candidate
 directory. A Hugging Face write token is required on that node:
 

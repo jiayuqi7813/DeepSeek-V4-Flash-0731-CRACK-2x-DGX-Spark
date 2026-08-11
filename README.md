@@ -11,6 +11,11 @@ the three DSpark MTP projections used by the verified Anemll/vLLM runtime.
 
 ## Status
 
+The validated 48-shard checkpoint is published at
+[`Sn1waR/DeepSeek-V4-Flash-0731-CRACK-DSpark`](https://huggingface.co/Sn1waR/DeepSeek-V4-Flash-0731-CRACK-DSpark).
+The initial weight release is pinned at Hub commit
+`86d85ce97bdcb9897fb0d1dd9caf7ef57e124e1a`.
+
 The released candidate is a layer-local SRA rank-1 Householder reflection on
 attention `wo_b`, layers 10–42, with native fixed UE8M0 scales and stock MTP
 weights. It passed full tensor integrity on both nodes. On the 85-prompt
@@ -155,4 +160,5 @@ protocols, hashes, selection seeds, and limitations are in
 The project code is MIT licensed. DeepSeek model weights remain subject to the
 upstream model license. Dataset licenses and exact revisions are recorded in
 `THIRD_PARTY_NOTICES.md`; generated model releases must carry the same notices
-and an edit manifest.
+and an edit manifest. The validated checkpoint and those release artifacts are
+available on [Hugging Face](https://huggingface.co/Sn1waR/DeepSeek-V4-Flash-0731-CRACK-DSpark).
