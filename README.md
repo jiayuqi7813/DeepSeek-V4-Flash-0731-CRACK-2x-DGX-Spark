@@ -164,6 +164,16 @@ code is scored in a separate networkless, resource-limited container. Exact
 protocols, hashes, selection seeds, and limitations are in
 `docs/EVALUATION.md`.
 
+## Acknowledgements
+
+Special thanks to [MiaAI-Lab](https://github.com/MiaAI-Lab) and the
+[DeepSeek V4 Flash DSpark project](https://github.com/MiaAI-Lab/DeepSeek-v4-Flash-DSpark-2x-DGX-Spark)
+for the original two-DGX-Spark deployment work, Anemll/vLLM integration,
+performance investigation, and runtime hotfixes that this project builds on.
+The production runtime vendored here is pinned to MiaAI-Lab commit `018c6bc`,
+with CRACK-specific checkpoint mounting, authentication, revision locking,
+and dual-CX-7 deployment configuration layered on top.
+
 ## License and weights
 
 The project code is MIT licensed. DeepSeek model weights remain subject to the
