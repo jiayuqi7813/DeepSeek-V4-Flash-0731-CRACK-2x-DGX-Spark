@@ -19,6 +19,12 @@ vLLM source. vLLM is licensed under Apache-2.0.
 The deployment profile expects
 `ghcr.io/anemll/dspark-vllm-gx10:0.1.1`; it does not redistribute that image.
 
+Production orchestration files and selected runtime hotfixes under
+`runtime/miaai-dspark/` are derived from
+`MiaAI-Lab/DeepSeek-v4-Flash-DSpark-2x-DGX-Spark`, pinned at commit `018c6bc`.
+That repository is MIT licensed, copyright (c) 2026 Tony Deangelo. The
+upstream license is reproduced as `runtime/miaai-dspark/LICENSE.upstream`.
+
 ## Semantic Harmful–Harmless Prompt Pairs
 
 - Repository: `heretic-org/Semantic-Harmless`

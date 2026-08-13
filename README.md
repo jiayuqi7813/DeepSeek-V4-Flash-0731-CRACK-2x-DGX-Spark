@@ -39,6 +39,13 @@ graphs, a 1,048,576-token advertised context window, OpenAI and Anthropic
 routes, tool calls, and API-key enforcement. The measured MTP token acceptance
 rate after the Pi throughput run was 79.50%.
 
+The repository also vendors the production launcher and the Anemll 0.1.1
+hotfix set validated on 2026-08-13. The update covers tool-argument encoding,
+NVFP4 long-context decode, structured-output reasoning boundaries, hybrid
+prefix caching, partial-prefill scheduling, V2 thinking budgets, and three
+verified vLLM performance backports. These runtime files are pinned to MiaAI
+Lab upstream commit `018c6bc`; model weights and the CRACK edit are unchanged.
+
 ## Execution boundary
 
 Model weights are never loaded on the control Mac. Checkpoint editing,
@@ -75,14 +82,14 @@ current candidate.
 
 - Model: `deepseek-ai/DeepSeek-V4-Flash-0731`
 - Revision: `9e165c30e2704aec5d9d593cce3eebd58bbef1cb`
-- Runtime image: `ghcr.io/anemll/dspark-vllm-gx10:0.1.1`
+- Runtime image: `ghcr.io/anemll/dspark-vllm-gx10:0.1.1@sha256:a83948492cf13df455170fb42885f5ef4db54fefe0feff0f841ecbff464ac9d8`
 - Runtime image ID: `sha256:3430d6614a8e2925f34d059af6caf05aff42387326db4d05639a60f10f2654d8`
 - Topology: vLLM TP=2 / NCCL over the verified dual-CX-7 RoCE fabric
 
 ## Repository layout
 
 - `src/dspark_crack/`: identity, analysis, and FP8 editing implementation
-- `runtime/`: opt-in vLLM capture hook; active only in the capture profile
+- `runtime/`: opt-in capture hook plus the pinned, production-ready MiaAI DSpark runtime
 - `scripts/`: dataset, capture, deployment, and validation entry points
 - `deploy/`: capture-only two-node Compose profile
 - `docs/`: method, research record, capability analysis, and measured results
@@ -143,8 +150,10 @@ PROFILE_ENV_BASENAME=.env.production.local \
 ```
 
 The production profile preserves the DSpark MTP speculative path, 1M declared
-context, CUDA graphs, TP=2, and dual-CX-7 NCCL fabric. The stop wrapper always
-stops the worker before the head.
+context, CUDA graphs, TP=2, and dual-CX-7 NCCL fabric. It uses the versioned
+runtime under `runtime/miaai-dspark/`; a separate checkout of the original
+MiaAI repository is no longer required. The stop wrapper always stops the
+worker before the head.
 
 ## Evaluation
 

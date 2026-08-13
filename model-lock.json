@@ -26,6 +26,6 @@
     ".hf-manifest.json": "3bde134067c44bf8be782200d94d9743170101463c642b0564e51a6a8db8dd8c",
     "LICENSE": "f2c6c602815669d292889e5be8c802f2ed950653b77999b1584e8e6aed25d040"
   },
-  "runtime_image": "ghcr.io/anemll/dspark-vllm-gx10:0.1.1",
+  "runtime_image": "ghcr.io/anemll/dspark-vllm-gx10:0.1.1@sha256:a83948492cf13df455170fb42885f5ef4db54fefe0feff0f841ecbff464ac9d8",
   "runtime_image_id": "sha256:3430d6614a8e2925f34d059af6caf05aff42387326db4d05639a60f10f2654d8"
 }

@@ -213,3 +213,23 @@ passed.
 - Final state: the CRACK TP=2 API remains online. Persona API/Gradio, MiniMax
   H3, Ray, and the raw ComfyUI backend remain stopped; the Nginx 8188 entry is
   still present with its backend offline.
+
+## 2026-08-13 — MiaAI runtime hotfix update
+
+- MiaAI Lab upstream was inspected at commit `018c6bc`. Its rewritten `main`
+  history was not merged into the existing local deployment checkout.
+- Nine validated Anemll 0.1.1 fixes were imported: project issues #21, #22,
+  #24, #26, #27, and #31, plus vLLM backports #50312, #50004, and #49486.
+  Dormant #48407 and the not-yet-live #48957/#50298 scripts were excluded.
+- The production profile now sets `LONG_PREFILL_TOKEN_THRESHOLD=1024` and
+  `VLLM_PREFIX_CACHE_RETENTION_INTERVAL=4096`, while retaining 1M context,
+  six sequence slots, MTP=5, GPU utilization 0.80, and default low thinking.
+- Both nodes ran every selected hotfix before the vLLM process started. All
+  status markers reported `APPLIED`; containers remained running with zero
+  restarts and `OOMKilled=false`.
+- API checks passed for Bearer authentication, ordinary chat, two-turn tool
+  calling, JSON Schema with thinking, and `thinking_token_budget=32`.
+- The verified deployment runtime is now tracked under
+  `runtime/miaai-dspark/`, so production no longer depends on an untracked
+  external MiaAI checkout. The Anemll image itself remains external and is
+  fixed by immutable manifest digest.

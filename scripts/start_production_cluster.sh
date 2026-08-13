@@ -8,7 +8,7 @@ WORKER_ALIAS="${WORKER_ALIAS:-dgx-spark-2}"
 REMOTE_USER="${REMOTE_USER:-$(id -un)}"
 REMOTE_HOME="${REMOTE_HOME:-/home/$REMOTE_USER}"
 REMOTE_PROJECT="${REMOTE_PROJECT:-$REMOTE_HOME/DeepSeek-V4-Flash-0731-CRACK-2x-DGX-Spark}"
-REMOTE_RUNTIME="${REMOTE_RUNTIME:-$REMOTE_HOME/DeepSeek-v4-Flash-DSpark-2x-DGX-Spark}"
+REMOTE_RUNTIME="${REMOTE_RUNTIME:-$REMOTE_PROJECT/runtime/miaai-dspark}"
 PROFILE_ENV_BASENAME="${PROFILE_ENV_BASENAME:-.env.production.local}"
 PROJECT_NAME="${PROJECT_NAME:-deepseek-v4-0731-crack}"
 API_HOST="${API_HOST:-192.168.31.200}"
@@ -21,6 +21,10 @@ fi
 if [[ ! -f "$PROJECT_DIR/deploy/$PROFILE_ENV_BASENAME" ]]; then
   echo "Missing local profile: $PROJECT_DIR/deploy/$PROFILE_ENV_BASENAME" >&2
   exit 2
+fi
+if [[ ! -x "$PROJECT_DIR/runtime/miaai-dspark/start-deepseek-v4-flash-dspark.sh" ]]; then
+  echo "Missing vendored MiaAI DSpark runtime under $PROJECT_DIR/runtime/miaai-dspark" >&2
+  exit 1
 fi
 
 cleanup_failed_start() {
