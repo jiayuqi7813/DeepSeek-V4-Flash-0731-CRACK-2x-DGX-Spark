@@ -233,3 +233,28 @@ passed.
   `runtime/miaai-dspark/`, so production no longer depends on an untracked
   external MiaAI checkout. The Anemll image itself remains external and is
   fixed by immutable manifest digest.
+
+## 2026-08-14 — runtime hotfix rollback and isolation
+
+- Under the combined hotfix profile, a 5,676-token prefill reached the SM12x
+  sparse-indexer path and ended with CUDA illegal memory access and NVIDIA Xid
+  31 on both nodes. Docker reported `OOMKilled=false`, and the host OOM killer
+  had no event for the failure.
+- Adding the vLLM #49897 SM12x prefill fallback prevented that index failure,
+  but a separate two-turn Pi session later produced a corrupted continuation
+  after a 4,608-token prefix-cache hit. This showed that the #49897 fallback
+  alone did not establish output stability for the combined profile.
+- The launcher now exposes independent switches for the base MiaAI group,
+  Issue #22, Issue #26, vLLM #50004, vLLM #49897, and long-prefill tuning. All
+  switches default to `0`. With long-prefill tuning disabled, the container
+  unsets `VLLM_PREFIX_CACHE_RETENTION_INTERVAL` and does not pass
+  `--long-prefill-token-threshold`.
+- The fully rolled-back baseline, Issue #22 alone, Issue #26 alone, and vLLM
+  #50004 alone each passed a long-input retrieval and a two-turn Pi
+  prefix-cache continuation. The isolated tests did not reproduce corrupted
+  output. The specific interaction in the combined profile remains unknown.
+- Final production validation used all six switches at `0`. A 7,621-token
+  request returned `FINAL-ROLLBACK-OK`; the Pi continuation remained coherent
+  with 768 cached tokens. Both containers were `running`, restart count zero,
+  and `OOMKilled=false`, with no new Xid, system OOM event, CUDA illegal memory
+  access, or engine fatal log after startup.

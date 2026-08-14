@@ -39,12 +39,15 @@ graphs, a 1,048,576-token advertised context window, OpenAI and Anthropic
 routes, tool calls, and API-key enforcement. The measured MTP token acceptance
 rate after the Pi throughput run was 79.50%.
 
-The repository also vendors the production launcher and the Anemll 0.1.1
-hotfix set validated on 2026-08-13. The update covers tool-argument encoding,
-NVFP4 long-context decode, structured-output reasoning boundaries, hybrid
-prefix caching, partial-prefill scheduling, V2 thinking budgets, and three
-verified vLLM performance backports. These runtime files are pinned to MiaAI
-Lab upstream commit `018c6bc`; model weights and the CRACK edit are unchanged.
+The repository also vendors the production launcher and optional Anemll 0.1.1
+hotfixes derived from MiaAI Lab upstream commit `018c6bc`. The hotfix files are
+retained for controlled testing, but all runtime overlays and long-prefill
+tuning are disabled by default. A combined hotfix deployment produced a CUDA
+illegal-memory-access/Xid 31 failure on a 5,676-token prefill and a separate
+corrupted continuation after a prefix-cache hit. The individual Issue #22,
+Issue #26, and vLLM #50004 overlays passed isolated tests, so the failing
+interaction has not been identified. The model weights and CRACK edit are
+unchanged.
 
 ## Execution boundary
 
@@ -154,6 +157,27 @@ context, CUDA graphs, TP=2, and dual-CX-7 NCCL fabric. It uses the versioned
 runtime under `runtime/miaai-dspark/`; a separate checkout of the original
 MiaAI repository is no longer required. The stop wrapper always stops the
 worker before the head.
+
+All optional runtime overlays default to `0` in
+`deploy/production.env.example`:
+
+```bash
+ENABLE_MIAAI_BASE_HOTFIXES=0
+ENABLE_DSV4_ISSUE22_HOTFIX=0
+ENABLE_DSV4_ISSUE26_HOTFIX=0
+ENABLE_DSV4_50004_HOTFIX=0
+ENABLE_DSV4_49897_HOTFIX=0
+ENABLE_MIAAI_LONG_PREFILL_TUNING=0
+```
+
+Keep these values at `0` for the validated production baseline. When
+`ENABLE_MIAAI_LONG_PREFILL_TUNING=0`, the launcher also removes
+`VLLM_PREFIX_CACHE_RETENTION_INTERVAL` and omits
+`--long-prefill-token-threshold`. Each high-risk overlay can be enabled
+independently for diagnosis without applying the complete hotfix set. The
+rolled-back baseline passed a 7,621-token retrieval request and a two-turn Pi
+prefix-cache continuation; both containers remained running with zero
+restarts, `OOMKilled=false`, and no new Xid.
 
 ## Evaluation
 

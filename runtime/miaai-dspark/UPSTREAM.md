@@ -10,8 +10,11 @@ checkpoint on two DGX Sparks.
 
 The Compose profile and launchers retain CRACK-specific local model mounts,
 API-key loading, fixed model revision support, and the verified dual-CX-7
-network configuration. The selected hotfixes are applied inside each new
-container before the vLLM process starts.
+network configuration. The selected hotfix files are available inside each
+new container, but their runtime overlays are disabled by default. Enable only
+the required overlay through the corresponding `ENABLE_*` profile variable.
+The validated production baseline keeps every overlay and long-prefill tuning
+switch at `0`.
 
 The vendored set deliberately excludes the experimental vision sidecar,
 dormant dense-prefill patch #48407, and the #48957/#50298 scripts that had not
